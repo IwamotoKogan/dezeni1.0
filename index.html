@@ -277,19 +277,7 @@
         const selectedImage = document.getElementById('selected-image');
         const selectedPatternTitle = document.getElementById('selected-pattern-title');
 
-        // Prikažite pop-up prozor kada se klikne na dugme "Odaberi dezen"
-        chooseButton.addEventListener('click', () => {
-            patternPopup.style.display = 'flex'; // Postavite na 'flex' umesto 'block'
-
-        });
-
-        // Zatvorite pop-up prozor kada se klikne na dugme "Zatvori"
-        closePopupButton.addEventListener('click', () => {
-            patternPopup.style.display = 'none';
-
-        });
-
-        // Dodajte event listenere za interakciju sa odabranim dezenom
+        
 
 
 
@@ -318,6 +306,8 @@
                 patternPopup.classList.remove('active'); // Zatvorite popup prozor
             });
         });
+
+        
 
         /*dodato*/
 
