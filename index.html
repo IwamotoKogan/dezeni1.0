@@ -236,7 +236,10 @@
   
 
     <script>
-       /*fetch*/
+       
+        document.addEventListener('DOMContentLoaded', function () {
+                
+           /*fetch*/
         // Dohvatanje JSON podataka o dezenima
             fetch("dezeni.json")
                 .then(function (response) {
@@ -264,9 +267,6 @@
                 });
 
         /*fetch*/
-        document.addEventListener('DOMContentLoaded', function () {
-                
-           
 
         
         const selectText = document.getElementById('select-text');
