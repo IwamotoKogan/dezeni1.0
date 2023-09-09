@@ -309,6 +309,7 @@
         const patterns = document.querySelectorAll('.pattern');
         patterns.forEach(pattern => {
             pattern.addEventListener('click', () => {
+                console.log("Kliknuto na dezen.");
                 selectedImage.src = pattern.querySelector('img').src;
                 selectedPatternTitle.textContent = pattern.querySelector('p').textContent;
                 selectedPattern.style.display = 'block'; // Prikažite odabrani dezen
