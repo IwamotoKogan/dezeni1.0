@@ -250,7 +250,7 @@
                     return response.json();
                 })
                 .then(function (dezeni) {
-                    let dezeniContainer = document.getElementById("dezeni");
+                    let dezeniContainer = document.getElementsByClassName("pattern-grid");
                     let html = "";
 
                     // Iteriranje kroz svaki dezen i generisanje HTML za svaki od njih
@@ -271,7 +271,7 @@
                 });
 
             /*fetch*/
-            
+
         // Prikažite pop-up prozor kada se klikne na dugme "Odaberi dezen"
         chooseButton.addEventListener('click', () => {
             patternPopup.style.display = 'flex'; // Postavite na 'flex' umesto 'block'
