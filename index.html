@@ -237,6 +237,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+                
+           
+
         /*fetch*/
             // Dohvatanje JSON podataka o dezenima
             fetch("dezeni.json")
@@ -309,7 +313,6 @@
         const patterns = document.querySelectorAll('.pattern');
         patterns.forEach(pattern => {
             pattern.addEventListener('click', () => {
-                console.log("Kliknuto na dezen.");
                 selectedImage.src = pattern.querySelector('img').src;
                 selectedPatternTitle.textContent = pattern.querySelector('p').textContent;
                 selectedPattern.style.display = 'block'; // Prikažite odabrani dezen
@@ -343,6 +346,7 @@
             });
         });
         /*pretraga dezena*/
+         });
     </script>
 </body>
 
