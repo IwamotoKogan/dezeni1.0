@@ -279,7 +279,7 @@
 
         
 
-
+            const patterns = document.querySelectorAll('.pattern');
 
         /*dodato*/
         const element = document.getElementById('pattern-popup');
@@ -297,7 +297,7 @@
         });
 
         // Dodajte event listenere za interakciju sa odabranim dezenom
-        const patterns = document.querySelectorAll('.pattern');
+        
         patterns.forEach(pattern => {
             pattern.addEventListener('click', () => {
                 selectedImage.src = pattern.querySelector('img').src;
@@ -321,7 +321,7 @@
             const searchValue = searchInput.value.toLowerCase(); // Dobijte vrednost pretrage i pretvorite je u mala slova
 
             // Dobijte sve dezeni
-            const patterns = document.querySelectorAll('.pattern');
+            
 
             // Iterirajte kroz svaki dezen i sakrijte one koji ne odgovaraju unosu pretrage
             patterns.forEach(pattern => {
