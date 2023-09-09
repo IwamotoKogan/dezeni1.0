@@ -296,16 +296,7 @@
         const element = document.getElementById('pattern-popup');
 
 
-        // Prikažite pop-up prozor kada se klikne na dugme "Odaberi dezen"
-        chooseButton.addEventListener('click', () => {
-            patternPopup.classList.add('active');
-        });
-
-        // Zatvorite pop-up prozor kada se klikne na dugme "Zatvori"
-        closePopupButton.addEventListener('click', () => {
-            patternPopup.classList.remove('active');
-            selectText.style.display = 'block'; // Ponovo prikažite tekst "Odaberite dezen fronta"
-        });
+        
 
         // Dodajte event listenere za interakciju sa odabranim dezenom
         const patterns = document.querySelectorAll('.pattern');
