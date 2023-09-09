@@ -22,7 +22,7 @@
 
 
             /*dodato*/
-
+           
         }
 
         #pattern-popup.active {
@@ -85,29 +85,26 @@
             /* Centrirajte horizontalno */
             margin: 0 auto;
         }
-
         #selected-pattern img {
             width: 200px;
             height: 200px;
         }
 
-        /*search dezena*/
-        .search-dezena {
-            display: flex;
-            grid-column: 1 / -1;
-            justify-content: flex-end;
+/*search dezena*/
+.search-dezena {
+    display: flex;
+    grid-column: 1 / -1;
+    justify-content: flex-end;
 
-        }
-
-        #dezeni {
-            display: flex;
-            flex-direction: column;
-
-            padding: 5px;
-            border: 1.5px solid #a19494;
-        }
-
-        /*search dezena*/
+}
+#dezeni {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 5px;
+    border: 1.5px solid #a19494;
+}
+/*search dezena*/
 
 
         /*responsive*/
@@ -140,7 +137,10 @@
 
         /*dodato*/
         /* Dodajte tranziciju za transform svojstvo */
-        #pattern-popup {}
+        #pattern-popup {
+
+           
+        }
 
         /* Kada je popup otvoren, pomerite ga na 0 sa desne strane */
         #pattern-popup.active {
@@ -149,60 +149,59 @@
 
         /*dodato*/
         /***************stilizacija DUGMETA******************/
+        
 
+/* CSS */
+.button-84 {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 8px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1),0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 18px;
+  height: 52px;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 150ms;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
-        /* CSS */
-        .button-84 {
-            align-items: center;
-            background-color: initial;
-            background-image: linear-gradient(#464d55, #25292e);
-            border-radius: 8px;
-            border-width: 0;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
-            box-sizing: border-box;
-            color: #fff;
-            cursor: pointer;
-            display: inline-flex;
-            flex-direction: column;
-            font-family: expo-brand-demi, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            font-size: 18px;
-            height: 52px;
-            justify-content: center;
-            line-height: 1;
-            margin: 0;
-            outline: none;
-            overflow: hidden;
-            padding: 0 32px;
-            text-align: center;
-            text-decoration: none;
-            transform: translate3d(0, 0, 0);
-            transition: all 150ms;
-            vertical-align: baseline;
-            white-space: nowrap;
-            user-select: none;
-            -webkit-user-select: none;
-            touch-action: manipulation;
-        }
+.button-84:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .85;
+}
 
-        .button-84:hover {
-            box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
-            opacity: .85;
-        }
+.button-84:active {
+  outline: 0;
+}
 
-        .button-84:active {
-            outline: 0;
-        }
+.button-84:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
 
-        .button-84:focus {
-            box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
-        }
-
-        @media (max-width: 420px) {
-            .button-84 {
-                height: 48px;
-            }
-        }
-
+@media (max-width: 420px) {
+  .button-84 {
+    height: 48px;
+  }
+}
         /***************stilizacija DUGMETA******************/
     </style>
 </head>
@@ -212,16 +211,58 @@
         <p id="select-text">Odaberite dezen fronta</p>
         <button id="choose-pattern" class="button-84">Odaberi dezen</button>
         <div id="pattern-popup">
-
+        
             <div class="pattern-grid">
                 <div class="search-dezena">
                     <p>pretrazite dezene</p>
                     <input type="text" id="search-pattern" placeholder="Pretraga dezena...">
                 </div>
-
-                
-
-
+        
+                <div class="pattern">
+                    <img src="./dezeni/0026 Prado Alu Gray.jpg" alt="Dezen 1">
+                    <p>0026 Prado Alu Gray</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0027 Prado.jpg" alt="Dezen 1">
+                    <p>0027 Prado</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0328 Brushed Aluminium.jpg" alt="Dezen 1">
+                    <p>0328 Brushed Aluminium</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0426 Loft.jpg" alt="Dezen 1">
+                    <p>0426 Loft</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0427 Skyline.jpg" alt="Dezen 1">
+                    <p>0427 Skyline</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0428 Cave.jpg" alt="Dezen 1">
+                    <p>0428 Cave</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0498 Nexus.jpg" alt="Dezen 1">
+                    <p>0498 Nexus</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0502 Samba.jpg" alt="Dezen 1">
+                    <p>0502 Samba</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0503 Eos.jpg" alt="Dezen 1">
+                    <p>0503 Eos</p>
+                </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
                 <!-- Dodajte još sličica sa dezenima -->
             </div>
             <button id="close-popup">Zatvori</button>
@@ -231,9 +272,9 @@
             <p id="selected-pattern-title"></p>
         </div>
     </div>
-
     
-    
+    <!-- Uključite GSAP izdanje preko CDN-a -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
 
     <script>
         const selectText = document.getElementById('select-text');
@@ -245,58 +286,36 @@
         const selectedImage = document.getElementById('selected-image');
         const selectedPatternTitle = document.getElementById('selected-pattern-title');
 
-        /*fetch*/
-        /*fetch*/
-            // Dohvatanje JSON podataka o dezenima
-            fetch("dezeni.json")
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (dezeni) {
-                    let dezeniContainer = document.querySelector(".pattern-grid");
-                    let html = "";
-
-                    // Iteriranje kroz svaki dezen i generisanje HTML za svaki od njih
-                    dezeni.forEach(function (dezen) {
-                        html += `
-        <div class="pattern">
-          <img src="${dezen.image}" alt="${dezen.name}">
-          <p>${dezen.name}</p>
-        </div>
-      `;
-                    });
-
-                    // Postavljanje generisanog HTML-a unutar odgovarajućeg kontejnera
-                    dezeniContainer.innerHTML += html;
-                })
-                .catch(function (error) {
-                    console.error("Greška pri dohvatanju podataka: " + error);
-                });
-
-            /*fetch*/
-        /*fetch*/
-
         // Prikažite pop-up prozor kada se klikne na dugme "Odaberi dezen"
         chooseButton.addEventListener('click', () => {
             patternPopup.style.display = 'flex'; // Postavite na 'flex' umesto 'block'
-
+             
         });
 
         // Zatvorite pop-up prozor kada se klikne na dugme "Zatvori"
         closePopupButton.addEventListener('click', () => {
             patternPopup.style.display = 'none';
-
+            
         });
 
         // Dodajte event listenere za interakciju sa odabranim dezenom
-
+       
 
 
         /*dodato*/
         const element = document.getElementById('pattern-popup');
 
 
-        
+       // Prikažite pop-up prozor kada se klikne na dugme "Odaberi dezen"
+        chooseButton.addEventListener('click', () => {
+            patternPopup.classList.add('active');
+        });
+
+        // Zatvorite pop-up prozor kada se klikne na dugme "Zatvori"
+        closePopupButton.addEventListener('click', () => {
+            patternPopup.classList.remove('active');
+            selectText.style.display = 'block'; // Ponovo prikažite tekst "Odaberite dezen fronta"
+        });
 
         // Dodajte event listenere za interakciju sa odabranim dezenom
         const patterns = document.querySelectorAll('.pattern');
@@ -314,27 +333,27 @@
         /*pretraga dezena***********/
 
         // Dobijte referencu na input polje za pretragu
-        const searchInput = document.getElementById('search-pattern');
+            const searchInput = document.getElementById('search-pattern');
 
-        // Dodajte event listener za promene u input polju
-        searchInput.addEventListener('input', () => {
-            const searchValue = searchInput.value.toLowerCase(); // Dobijte vrednost pretrage i pretvorite je u mala slova
+            // Dodajte event listener za promene u input polju
+            searchInput.addEventListener('input', () => {
+                const searchValue = searchInput.value.toLowerCase(); // Dobijte vrednost pretrage i pretvorite je u mala slova
 
-            // Dobijte sve dezeni
-            const patterns = document.querySelectorAll('.pattern');
+                // Dobijte sve dezeni
+                const patterns = document.querySelectorAll('.pattern');
 
-            // Iterirajte kroz svaki dezen i sakrijte one koji ne odgovaraju unosu pretrage
-            patterns.forEach(pattern => {
-                const name = pattern.querySelector('p').textContent.toLowerCase(); // Dobijte ime dezena
+                // Iterirajte kroz svaki dezen i sakrijte one koji ne odgovaraju unosu pretrage
+                patterns.forEach(pattern => {
+                    const name = pattern.querySelector('p').textContent.toLowerCase(); // Dobijte ime dezena
 
-                if (name.includes(searchValue)) {
-                    pattern.style.display = 'block'; // Prikaži dezen ako odgovara pretrazi
-                } else {
-                    pattern.style.display = 'none'; // Sakrij dezen ako ne odgovara pretrazi
-                }
+                    if (name.includes(searchValue)) {
+                        pattern.style.display = 'block'; // Prikaži dezen ako odgovara pretrazi
+                    } else {
+                        pattern.style.display = 'none'; // Sakrij dezen ako ne odgovara pretrazi
+                    }
+                });
             });
-        });
-        /*pretraga dezena*/
+/*pretraga dezena*/
     </script>
 </body>
 
