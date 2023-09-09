@@ -264,7 +264,7 @@
                     });
 
                     // Postavljanje generisanog HTML-a unutar odgovarajućeg kontejnera
-                    dezeniContainer.innerHTML = html;
+                    dezeniContainer.innerHTML += html;
                 })
                 .catch(function (error) {
                     console.error("Greška pri dohvatanju podataka: " + error);
