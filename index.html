@@ -219,7 +219,10 @@
                     <input type="text" id="search-pattern" placeholder="Pretraga dezena...">
                 </div>
 
-                               <!-- Dodajte još sličica sa dezenima -->
+                
+
+
+                <!-- Dodajte još sličica sa dezenima -->
             </div>
             <button id="close-popup">Zatvori</button>
         </div>
@@ -229,8 +232,8 @@
         </div>
     </div>
 
-    
-   
+    <!-- Uključite GSAP izdanje preko CDN-a -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
 
     <script>
         const selectText = document.getElementById('select-text');
@@ -242,7 +245,7 @@
         const selectedImage = document.getElementById('selected-image');
         const selectedPatternTitle = document.getElementById('selected-pattern-title');
 
-
+        /*fetch*/
         /*fetch*/
             // Dohvatanje JSON podataka o dezenima
             fetch("dezeni.json")
@@ -250,7 +253,7 @@
                     return response.json();
                 })
                 .then(function (dezeni) {
-                  let dezeniContainer = document.querySelector(".pattern-grid");
+                    let dezeniContainer = document.querySelector(".pattern-grid");
                     let html = "";
 
                     // Iteriranje kroz svaki dezen i generisanje HTML za svaki od njih
@@ -271,6 +274,7 @@
                 });
 
             /*fetch*/
+        /*fetch*/
 
         // Prikažite pop-up prozor kada se klikne na dugme "Odaberi dezen"
         chooseButton.addEventListener('click', () => {
