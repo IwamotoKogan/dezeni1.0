@@ -250,7 +250,7 @@
                     return response.json();
                 })
                 .then(function (dezeni) {
-                    let dezeniContainer = document.getElementsByClassName("pattern-grid");
+                  let dezeniContainer = document.querySelector(".pattern-grid");
                     let html = "";
 
                     // Iteriranje kroz svaki dezen i generisanje HTML za svaki od njih
