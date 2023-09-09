@@ -218,7 +218,42 @@
                     <p>pretrazite dezene</p>
                     <input type="text" id="search-pattern" placeholder="Pretraga dezena...">
                 </div>
-
+                <div class="pattern">
+                    <img src="./dezeni/0026 Prado Alu Gray.jpg" alt="Dezen 1">
+                    <p>0026 Prado Alu Gray</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0027 Prado.jpg" alt="Dezen 1">
+                    <p>0027 Prado</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0328 Brushed Aluminium.jpg" alt="Dezen 1">
+                    <p>0328 Brushed Aluminium</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0426 Loft.jpg" alt="Dezen 1">
+                    <p>0426 Loft</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0427 Skyline.jpg" alt="Dezen 1">
+                    <p>0427 Skyline</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0428 Cave.jpg" alt="Dezen 1">
+                    <p>0428 Cave</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0498 Nexus.jpg" alt="Dezen 1">
+                    <p>0498 Nexus</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0502 Samba.jpg" alt="Dezen 1">
+                    <p>0502 Samba</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0503 Eos.jpg" alt="Dezen 1">
+                    <p>0503 Eos</p>
+                </div>
                 
 
 
@@ -240,7 +275,7 @@
                 
            
 
-        /*fetch*/
+        /*fetch
             // Dohvatanje JSON podataka o dezenima
             fetch("dezeni.json")
                 .then(function (response) {
@@ -267,7 +302,7 @@
                     console.error("Greška pri dohvatanju podataka: " + error);
                 });
 
-            /*fetch*/
+            fetch*/
         const selectText = document.getElementById('select-text');
         const chooseButton = document.getElementById('choose-pattern');
         const patternPopup = document.getElementById('pattern-popup');
@@ -279,7 +314,7 @@
 
         
 
-            const patterns = document.querySelectorAll('.pattern');
+
 
         /*dodato*/
         const element = document.getElementById('pattern-popup');
@@ -297,7 +332,7 @@
         });
 
         // Dodajte event listenere za interakciju sa odabranim dezenom
-        
+        const patterns = document.querySelectorAll('.pattern');
         patterns.forEach(pattern => {
             pattern.addEventListener('click', () => {
                 selectedImage.src = pattern.querySelector('img').src;
@@ -321,7 +356,7 @@
             const searchValue = searchInput.value.toLowerCase(); // Dobijte vrednost pretrage i pretvorite je u mala slova
 
             // Dobijte sve dezeni
-            
+            const patterns = document.querySelectorAll('.pattern');
 
             // Iterirajte kroz svaki dezen i sakrijte one koji ne odgovaraju unosu pretrage
             patterns.forEach(pattern => {
@@ -338,7 +373,7 @@
             console.log('radi')
         }
         patternPopup.onclick = () => {
-            console.log("i ovo radi")
+            console.log("i ovo")
         }
         /*pretraga dezena*/
          });
