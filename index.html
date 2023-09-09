@@ -218,42 +218,7 @@
                     <p>pretrazite dezene</p>
                     <input type="text" id="search-pattern" placeholder="Pretraga dezena...">
                 </div>
-                <div class="pattern">
-                    <img src="./dezeni/0026 Prado Alu Gray.jpg" alt="Dezen 1">
-                    <p>0026 Prado Alu Gray</p>
-                </div>
-                <div class="pattern">
-                    <img src="./dezeni/0027 Prado.jpg" alt="Dezen 1">
-                    <p>0027 Prado</p>
-                </div>
-                <div class="pattern">
-                    <img src="./dezeni/0328 Brushed Aluminium.jpg" alt="Dezen 1">
-                    <p>0328 Brushed Aluminium</p>
-                </div>
-                <div class="pattern">
-                    <img src="./dezeni/0426 Loft.jpg" alt="Dezen 1">
-                    <p>0426 Loft</p>
-                </div>
-                <div class="pattern">
-                    <img src="./dezeni/0427 Skyline.jpg" alt="Dezen 1">
-                    <p>0427 Skyline</p>
-                </div>
-                <div class="pattern">
-                    <img src="./dezeni/0428 Cave.jpg" alt="Dezen 1">
-                    <p>0428 Cave</p>
-                </div>
-                <div class="pattern">
-                    <img src="./dezeni/0498 Nexus.jpg" alt="Dezen 1">
-                    <p>0498 Nexus</p>
-                </div>
-                <div class="pattern">
-                    <img src="./dezeni/0502 Samba.jpg" alt="Dezen 1">
-                    <p>0502 Samba</p>
-                </div>
-                <div class="pattern">
-                    <img src="./dezeni/0503 Eos.jpg" alt="Dezen 1">
-                    <p>0503 Eos</p>
-                </div>
+                
                 
 
 
@@ -271,11 +236,7 @@
   
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-                
-           
-
-        /*fetch
+        /*fetch*/
             // Dohvatanje JSON podataka o dezenima
             fetch("dezeni.json")
                 .then(function (response) {
@@ -302,7 +263,12 @@
                     console.error("Greška pri dohvatanju podataka: " + error);
                 });
 
-            fetch*/
+            /*fetch*/
+        document.addEventListener('DOMContentLoaded', function () {
+                
+           
+
+        
         const selectText = document.getElementById('select-text');
         const chooseButton = document.getElementById('choose-pattern');
         const patternPopup = document.getElementById('pattern-popup');
