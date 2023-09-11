@@ -239,14 +239,27 @@
        
         document.addEventListener('DOMContentLoaded', function () {
                 
-           /*fetch*/
-        // Dohvatanje JSON podataka o dezenima
+           
+
+        
+        const selectText = document.getElementById('select-text');
+        const chooseButton = document.getElementById('choose-pattern');
+        const patternPopup = document.getElementById('pattern-popup');
+        const closePopupButton = document.getElementById('close-popup');
+        const patternGrid = document.querySelector('.pattern-grid');
+        const selectedPattern = document.getElementById('selected-pattern');
+        const selectedImage = document.getElementById('selected-image');
+        const selectedPatternTitle = document.getElementById('selected-pattern-title');
+
+        
+        /*fetch*/
+            // Dohvatanje JSON podataka o dezenima
             fetch("dezeni.json")
                 .then(function (response) {
                     return response.json();
                 })
                 .then(function (dezeni) {
-                    let dezeniContainer = document.getElementById("dezeni");
+                    let dezeniContainer = document.getElementById("pattern-popup");
                     let html = "";
 
                     // Iteriranje kroz svaki dezen i generisanje HTML za svaki od njih
@@ -266,20 +279,7 @@
                     console.error("Greška pri dohvatanju podataka: " + error);
                 });
 
-        /*fetch*/
-
-        
-        const selectText = document.getElementById('select-text');
-        const chooseButton = document.getElementById('choose-pattern');
-        const patternPopup = document.getElementById('pattern-popup');
-        const closePopupButton = document.getElementById('close-popup');
-        const patternGrid = document.querySelector('.pattern-grid');
-        const selectedPattern = document.getElementById('selected-pattern');
-        const selectedImage = document.getElementById('selected-image');
-        const selectedPatternTitle = document.getElementById('selected-pattern-title');
-
-        
-
+            /*fetch*/
 
 
         /*dodato*/
@@ -343,7 +343,6 @@
         }
         /*pretraga dezena*/
          });
-        
     </script>
 </body>
 
