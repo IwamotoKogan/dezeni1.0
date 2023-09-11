@@ -218,8 +218,43 @@
                     <p>pretrazite dezene</p>
                     <input type="text" id="search-pattern" placeholder="Pretraga dezena...">
                 </div>
-                
-                
+
+                <div class="pattern">
+                    <img src="./dezeni/0026 Prado Alu Gray.jpg" alt="Dezen 1">
+                    <p>0026 Prado Alu Gray</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0027 Prado.jpg" alt="Dezen 1">
+                    <p>0027 Prado</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0328 Brushed Aluminium.jpg" alt="Dezen 1">
+                    <p>0328 Brushed Aluminium</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0426 Loft.jpg" alt="Dezen 1">
+                    <p>0426 Loft</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0427 Skyline.jpg" alt="Dezen 1">
+                    <p>0427 Skyline</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0428 Cave.jpg" alt="Dezen 1">
+                    <p>0428 Cave</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0498 Nexus.jpg" alt="Dezen 1">
+                    <p>0498 Nexus</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0502 Samba.jpg" alt="Dezen 1">
+                    <p>0502 Samba</p>
+                </div>
+                <div class="pattern">
+                    <img src="./dezeni/0503 Eos.jpg" alt="Dezen 1">
+                    <p>0503 Eos</p>
+                </div>
 
 
 
@@ -233,14 +268,14 @@
         </div>
     </div>
 
-  
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-                
-           
 
-        /*fetch*/
+
+
+            /*fetch
             // Dohvatanje JSON podataka o dezenima
             fetch("dezeni.json")
                 .then(function (response) {
@@ -267,81 +302,81 @@
                     console.error("Greška pri dohvatanju podataka: " + error);
                 });
 
-            /*fetch*/
-        const selectText = document.getElementById('select-text');
-        const chooseButton = document.getElementById('choose-pattern');
-        const patternPopup = document.getElementById('pattern-popup');
-        const closePopupButton = document.getElementById('close-popup');
-        const patternGrid = document.querySelector('.pattern-grid');
-        const selectedPattern = document.getElementById('selected-pattern');
-        const selectedImage = document.getElementById('selected-image');
-        const selectedPatternTitle = document.getElementById('selected-pattern-title');
-
-        
+            fetch*/
+            const selectText = document.getElementById('select-text');
+            const chooseButton = document.getElementById('choose-pattern');
+            const patternPopup = document.getElementById('pattern-popup');
+            const closePopupButton = document.getElementById('close-popup');
+            const patternGrid = document.querySelector('.pattern-grid');
+            const selectedPattern = document.getElementById('selected-pattern');
+            const selectedImage = document.getElementById('selected-image');
+            const selectedPatternTitle = document.getElementById('selected-pattern-title');
 
 
 
-        /*dodato*/
-        const element = document.getElementById('pattern-popup');
 
 
-        // Prikažite pop-up prozor kada se klikne na dugme "Odaberi dezen"
-        chooseButton.addEventListener('click', () => {
-            patternPopup.classList.add('active');
-        });
+            /*dodato*/
+            const element = document.getElementById('pattern-popup');
 
-        // Zatvorite pop-up prozor kada se klikne na dugme "Zatvori"
-        closePopupButton.addEventListener('click', () => {
-            patternPopup.classList.remove('active');
-            selectText.style.display = 'block'; // Ponovo prikažite tekst "Odaberite dezen fronta"
-        });
 
-        // Dodajte event listenere za interakciju sa odabranim dezenom
-        const patterns = document.querySelectorAll('.pattern');
-        patterns.forEach(pattern => {
-            pattern.addEventListener('click', () => {
-                selectedImage.src = pattern.querySelector('img').src;
-                selectedPatternTitle.textContent = pattern.querySelector('p').textContent;
-                selectedPattern.style.display = 'block'; // Prikažite odabrani dezen
-                patternPopup.classList.remove('active'); // Zatvorite popup prozor
+            // Prikažite pop-up prozor kada se klikne na dugme "Odaberi dezen"
+            chooseButton.addEventListener('click', () => {
+                patternPopup.classList.add('active');
             });
-        });
 
-        
+            // Zatvorite pop-up prozor kada se klikne na dugme "Zatvori"
+            closePopupButton.addEventListener('click', () => {
+                patternPopup.classList.remove('active');
+                selectText.style.display = 'block'; // Ponovo prikažite tekst "Odaberite dezen fronta"
+            });
 
-        /*dodato*/
-
-        /*pretraga dezena***********/
-
-        // Dobijte referencu na input polje za pretragu
-        const searchInput = document.getElementById('search-pattern');
-
-        // Dodajte event listener za promene u input polju
-        searchInput.addEventListener('input', () => {
-            const searchValue = searchInput.value.toLowerCase(); // Dobijte vrednost pretrage i pretvorite je u mala slova
-
-            // Dobijte sve dezeni
+            // Dodajte event listenere za interakciju sa odabranim dezenom
             const patterns = document.querySelectorAll('.pattern');
-
-            // Iterirajte kroz svaki dezen i sakrijte one koji ne odgovaraju unosu pretrage
             patterns.forEach(pattern => {
-                const name = pattern.querySelector('p').textContent.toLowerCase(); // Dobijte ime dezena
-
-                if (name.includes(searchValue)) {
-                    pattern.style.display = 'block'; // Prikaži dezen ako odgovara pretrazi
-                } else {
-                    pattern.style.display = 'none'; // Sakrij dezen ako ne odgovara pretrazi
-                }
+                pattern.addEventListener('click', () => {
+                    selectedImage.src = pattern.querySelector('img').src;
+                    selectedPatternTitle.textContent = pattern.querySelector('p').textContent;
+                    selectedPattern.style.display = 'block'; // Prikažite odabrani dezen
+                    patternPopup.classList.remove('active'); // Zatvorite popup prozor
+                });
             });
+
+
+
+            /*dodato*/
+
+            /*pretraga dezena***********/
+
+            // Dobijte referencu na input polje za pretragu
+            const searchInput = document.getElementById('search-pattern');
+
+            // Dodajte event listener za promene u input polju
+            searchInput.addEventListener('input', () => {
+                const searchValue = searchInput.value.toLowerCase(); // Dobijte vrednost pretrage i pretvorite je u mala slova
+
+                // Dobijte sve dezeni
+                const patterns = document.querySelectorAll('.pattern');
+
+                // Iterirajte kroz svaki dezen i sakrijte one koji ne odgovaraju unosu pretrage
+                patterns.forEach(pattern => {
+                    const name = pattern.querySelector('p').textContent.toLowerCase(); // Dobijte ime dezena
+
+                    if (name.includes(searchValue)) {
+                        pattern.style.display = 'block'; // Prikaži dezen ako odgovara pretrazi
+                    } else {
+                        pattern.style.display = 'none'; // Sakrij dezen ako ne odgovara pretrazi
+                    }
+                });
+            });
+            patternGrid.onclick = () => {
+                console.log('radi')
+            }
+            patternPopup.onclick = () => {
+                console.log("i ovo")
+            }
+            /*pretraga dezena*/
         });
-        patternGrid.onclick = () => {
-            console.log('radi')
-        }
-        patternPopup.onclick = () => {
-            console.log("i ovo")
-        }
-        /*pretraga dezena*/
-         });
     </script>
 </body>
 
