@@ -274,6 +274,38 @@
                             patternPopup.classList.remove('active'); // Zatvorite popup prozor
                         });
                     });
+
+
+                    /*pretraga dezena***********/
+
+                    // Dobijte referencu na input polje za pretragu
+                    const searchInput = document.getElementById('search-pattern');
+
+                    // Dodajte event listener za promene u input polju
+                    searchInput.addEventListener('input', () => {
+                        const searchValue = searchInput.value.toLowerCase(); // Dobijte vrednost pretrage i pretvorite je u mala slova
+
+                        // Dobijte sve dezeni
+                        const patterns = document.querySelectorAll('.pattern');
+
+                        // Iterirajte kroz svaki dezen i sakrijte one koji ne odgovaraju unosu pretrage
+                        patterns.forEach(pattern => {
+                            const name = pattern.querySelector('p').textContent.toLowerCase(); // Dobijte ime dezena
+
+                            if (name.includes(searchValue)) {
+                                pattern.style.display = 'block'; // Prikaži dezen ako odgovara pretrazi
+                            } else {
+                                pattern.style.display = 'none'; // Sakrij dezen ako ne odgovara pretrazi
+                            }
+                        });
+                    });
+                    patternGrid.onclick = () => {
+                        console.log('radi')
+                    }
+                    patternPopup.onclick = () => {
+                        console.log("i ovo")
+                    }
+                    /*pretraga dezena*/
                     /*premesten*/
                 })
                 .catch(function (error) {
@@ -315,36 +347,7 @@
 
             /*dodato*/
 
-            /*pretraga dezena***********/
-
-            // Dobijte referencu na input polje za pretragu
-            const searchInput = document.getElementById('search-pattern');
-
-            // Dodajte event listener za promene u input polju
-            searchInput.addEventListener('input', () => {
-                const searchValue = searchInput.value.toLowerCase(); // Dobijte vrednost pretrage i pretvorite je u mala slova
-
-                // Dobijte sve dezeni
-                const patterns = document.querySelectorAll('.pattern');
-
-                // Iterirajte kroz svaki dezen i sakrijte one koji ne odgovaraju unosu pretrage
-                patterns.forEach(pattern => {
-                    const name = pattern.querySelector('p').textContent.toLowerCase(); // Dobijte ime dezena
-
-                    if (name.includes(searchValue)) {
-                        pattern.style.display = 'block'; // Prikaži dezen ako odgovara pretrazi
-                    } else {
-                        pattern.style.display = 'none'; // Sakrij dezen ako ne odgovara pretrazi
-                    }
-                });
-            });
-            patternGrid.onclick = () => {
-                console.log('radi')
-            }
-            patternPopup.onclick = () => {
-                console.log("i ovo")
-            }
-            /*pretraga dezena*/
+            
         });
     </script>
 </body>
